@@ -3,7 +3,7 @@ Filter teams on the ESEA's ranking webpage, javascript to filter the teams of an
 
 # How to run it
 ## Console
-1. On your browser copy the content of the `esea-league-filter-raw.js.
+1. On your browser copy the content of the `esea-league-filter.js`.
 2. Paste it on your console input.
 3. Run it.
 
