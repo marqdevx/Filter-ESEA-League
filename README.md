@@ -1,6 +1,11 @@
 # Filter-ESEA-League
 Filter teams on the ESEA's ranking webpage, javascript to filter the teams of an specific country and set colors if they are qualified for playoffs
 
+# How it works
+1. Run the script:
+2. Type the country that you want to filter (first characte on capital letter)
+3. Run the script as much as you want, no need to reload the page everytime you want to filter.
+
 # How to run it
 ## Console
 1. Copy the content of the `esea-league-filter.js`.
