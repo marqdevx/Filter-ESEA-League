@@ -19,3 +19,7 @@ Filter teams on the ESEA's ranking webpage, javascript to filter the teams of an
 ![image](https://user-images.githubusercontent.com/11246294/213533813-0680d13b-cb13-4917-bedd-a1c0566c97cf.png)
 ![image](https://user-images.githubusercontent.com/11246294/213533970-422af6bd-8d65-486d-bc53-a311fa715189.png)
 ![image](https://user-images.githubusercontent.com/11246294/213534061-a42598ee-0654-4f02-89ff-a3631965ff2d.png)
+
+# References
+* Found this on this tweet: https://twitter.com/_Pitu_/status/1613854963364663296?s=20&t=JHM6d5cRPiwn8Ott1C376A
+* Based on steps and code of [@JVDM](https://twitter.com/JVDM__) from this [pastebin](https://pastebin.com/KZjS167p)
