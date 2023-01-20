@@ -17,7 +17,6 @@ javascript: (() => {
     flagOptions.add(newOption);
   }
 
-
   function addFlag(indexTeam) {
     flagOptions = flagBox.childNodes[0].childNodes[0];
 
@@ -27,10 +26,13 @@ javascript: (() => {
     }
 
     totalFlags[flagsCount] = flagName;
-
-    addDropDownFlag(flagName);
-
     flagsCount++;
+  }
+
+  function fillDropDown() {
+    for (let i = 0; i < totalFlags.length; i++) {
+      addDropDownFlag(totalFlags[i]);
+    }
   }
 
   function indexFlags() {
@@ -39,6 +41,9 @@ javascript: (() => {
     for (let i = 1; i < teamList.length; i++) {
       addFlag(i);
     }
+
+    totalFlags = totalFlags.sort();
+    fillDropDown();
   }
 
   function largeCutOff(teamsSize) {
@@ -184,7 +189,7 @@ javascript: (() => {
     flagBox = regionBox.cloneNode(true);
     flagBox.childNodes[0].childNodes[0].setAttribute("id", "flag");
     flagBox.childNodes[0].childNodes[0].onchange = function() {
-      filter();
+      filter()
     };
     flagBox.childNodes[0].childNodes[0].innerHTML = "";
 
