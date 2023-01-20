@@ -6,7 +6,6 @@ function doWork() {
   var totalFlags = [];
   var flagImages = [];
   var flagsCount = 0;
-
   var flagBox;
 
   function addDropDownFlag(flagName) {
@@ -123,7 +122,6 @@ function doWork() {
   }
 
   function getCutOff() {
-
     let cutOffValue = 0;
     let teamsSize = teamList.length - 1;
     switch (division) {
@@ -188,7 +186,7 @@ function doWork() {
     flagBox = regionBox.cloneNode(true);
     flagBox.childNodes[0].childNodes[0].setAttribute("id", "flag");
     flagBox.childNodes[0].childNodes[0].onchange = function() {
-      filter()
+      filter();
     };
     flagBox.childNodes[0].childNodes[0].innerHTML = "";
 
