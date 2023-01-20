@@ -30,9 +30,9 @@ Filter teams on the ESEA's ranking webpage, javascript to filter the teams of an
 4. Once you are on the division's page, click once the bookmark.
 
 # Screenshots
-![image](https://user-images.githubusercontent.com/11246294/213601755-8d50f0ee-d876-479d-8e63-656103a03671.png)
-![image](https://user-images.githubusercontent.com/11246294/213601818-64ea9aa4-3f42-4878-8c07-3a7a934f6a95.png)
-![image](https://user-images.githubusercontent.com/11246294/213601833-50df78ff-b41b-473e-854e-825fdd45bcc7.png)
+![image](https://user-images.githubusercontent.com/11246294/213807434-18a6cc9c-cda5-40a8-b3dc-394c40e36e9e.png)
+![image](https://user-images.githubusercontent.com/11246294/213807480-18cd391a-09b6-4cff-a68f-f3715bbbd4c9.png)
+![image](https://user-images.githubusercontent.com/11246294/213807509-505c72e8-bc11-41e4-8827-de4c447fa6c5.png)
 
 # References
 * Saw at: https://twitter.com/_Pitu_/status/1613854963364663296?s=20&t=JHM6d5cRPiwn8Ott1C376A
