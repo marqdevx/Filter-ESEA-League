@@ -186,6 +186,7 @@ javascript: (() => {
       var regionBox = document.getElementById("region").parentElement.parentElement;
       flagBox = regionBox.cloneNode(true);
       flagBox.childNodes[0].childNodes[0].setAttribute("id", "flag");
+      flagBox.childNodes[0].style.top = "10px";
       flagBox.childNodes[0].childNodes[0].onchange = function() {
         filter();
       };
