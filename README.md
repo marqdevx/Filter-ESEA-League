@@ -36,4 +36,4 @@ Filter teams on the ESEA's ranking webpage, javascript to filter the teams of an
 
 # References
 * Saw at: https://twitter.com/_Pitu_/status/1613854963364663296?s=20&t=JHM6d5cRPiwn8Ott1C376A
-* Based on steps and code of [@JVDM](https://twitter.com/JVDM__) from this [pastebin](https://pastebin.com/KZjS167p)
+* Based on steps and code of [@JVDM](https://twitter.com/JVDM__) and [@lopownz](https://twitter.com/lopownz) from this [pastebin](https://pastebin.com/KZjS167p)
