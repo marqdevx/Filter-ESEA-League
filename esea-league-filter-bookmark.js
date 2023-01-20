@@ -1,13 +1,55 @@
 javascript: (() => {
-  function filter() {
-    var teamList = document.getElementsByClassName('Tr');
-    var qeuedTeams = [];
-    var qeuedCount = 0;
-    var removedTeams = 0;
+ function doWork() {
+  var teamList = document.getElementsByClassName('Tr');
+  var qeuedTeams = [];
+  var qeuedCount = 0;
+  var removedTeams = 0;
+  var totalFlags = [];
+  var flagImages = [];
+  var flagsCount = 0;
 
-    var country = prompt("Type the country to filter");
+  var flagBox;
+
+  function addDropDownFlag(flagName) {
+    flagOptions = flagBox.childNodes[0].childNodes[0];
+    let newOption = document.createElement("option");
+    newOption.text = flagName;
+    flagOptions.add(newOption);
+  }
+
+  function addFlag(indexTeam) {
+    flagOptions = flagBox.childNodes[0].childNodes[0];
+
+    let flagName = teamList[indexTeam].childNodes[1].childNodes[0].childNodes[0].title ?? teamList[indexTeam].childNodes[1].childNodes[0].childNodes[0].childNodes[0].textContent;
+    for (let i = 0; i <= flagsCount; i++) {
+      if (flagName == totalFlags[i]) return;
+    }
+
+    totalFlags[flagsCount] = flagName;
+
+    addDropDownFlag(flagName);
+
+    flagsCount++;
+  }
+
+  function indexFlags() {
+    addDropDownFlag("Country");
+
     for (let i = 1; i < teamList.length; i++) {
-      if (teamList[i].childNodes[1].textContent.indexOf(country) == -1) {
+      addFlag(i);
+    }
+  }
+
+  function filter() {
+    let flagBoxFilter = document.getElementById("flag");
+    let country = flagBoxFilter.value;
+
+    for (let i = 1; i < teamList.length; i++) {
+      currentFlag = teamList[i].childNodes[1].childNodes[0].childNodes[0].title ?? teamList[i].childNodes[1].childNodes[0].childNodes[0].childNodes[0].textContent;
+      if (country == "Country") {
+        currentFlag = country;
+      }
+      if (currentFlag != country) {
         teamList[i].style.display = "none";
       } else {
         teamList[i].style.display = "";
@@ -25,6 +67,7 @@ javascript: (() => {
 
       ranking = targetTeam.childNodes[0].textContent.slice(0, targetTeam.childNodes[0].textContent.length - 1);
 
+      let cutOff = 0;
       switch (division) {
         case "open":
           cutOff = 192;
@@ -48,6 +91,22 @@ javascript: (() => {
     }
   }
 
-  filter();
+  function showSelectorButton() {
+    var regionBox = document.getElementById("region").parentElement.parentElement;
+    flagBox = regionBox.cloneNode(true);
+    flagBox.childNodes[0].childNodes[0].setAttribute("id", "flag");
+    flagBox.childNodes[0].childNodes[0].onchange = function() {
+      filter();
+    };
+    flagBox.childNodes[0].childNodes[0].innerHTML = "";
+
+    regionBox.parentElement.parentElement.parentElement.append(flagBox);
+  }
   
+  showSelectorButton();
+  indexFlags();
+  filter();
+}
+
+doWork();
 })();
