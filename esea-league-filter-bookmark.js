@@ -180,6 +180,9 @@ javascript: (() => {
           case "advanced":
             cutOffValue = esea.smallCutOff(teamsSize);
             break;
+          default:
+            cutOffValue = -1;
+            break;
         }
         return cutOffValue;
       }
@@ -214,7 +217,7 @@ javascript: (() => {
 
           let teamRank = targetTeam.childNodes[0].textContent.slice(0, targetTeam.childNodes[0].textContent.length - 1);
 
-          if (teamRank <= esea.getCutOff()) {
+          if (esea.getCutOff() < 0 || teamRank <= esea.getCutOff()) {
             targetTeam.childNodes[0].style.color = "green";
           } else {
             targetTeam.childNodes[0].style.color = "red";
