@@ -4,7 +4,7 @@ Filter teams on the ESEA's ranking webpage, javascript to filter the teams of an
 ## Features
 * Only needs to be run once, everytime it detects a division change, refreshes itself.
 * Color feedback for teams qualified/unqualified for playoffs, depending on the ladder ranking.
-* Working for every past season too.
+* Working for every past season (Ony for Challenger, Advanced, Main, Intermdiate and Open divisions).
 
 ## How it works
 * It will filter all the teams, and show colors depending on the state of the team
