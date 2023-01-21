@@ -1,6 +1,20 @@
+var myInterval = setInterval(autoChecker, 500);
+
+function autoChecker() {
+  console.log("Checking");
+  teamList = document.getElementsByClassName('Tr');
+  exists = document.getElementById('flag');
+  if (teamList.length > 1 && !exists) {
+    doWork();
+    clearInterval(myInterval);
+    document.getElementById("level").onchange = function () {
+      console.log("Switched division");
+      myInterval = setInterval(autoChecker, 500);
+    };
+  }
+}
+
 function doWork() {
-
-
   class dropDownFilter {
     teamList = document.getElementsByClassName('Tr');
     totalFlags = [];
@@ -10,15 +24,15 @@ function doWork() {
 
     constructor() { };
     create() {
-        var regionBox = document.getElementById("region").parentElement.parentElement;
-        this.flagBox = regionBox.cloneNode(true);
-        this.flagBox.childNodes[0].childNodes[0].setAttribute("id", "flag");
-        this.flagBox.childNodes[0].style.top = "10px";
-        this.flagBox.childNodes[0].childNodes[0].innerHTML = "";
+      var regionBox = document.getElementById("region").parentElement.parentElement;
+      this.flagBox = regionBox.cloneNode(true);
+      this.flagBox.childNodes[0].childNodes[0].setAttribute("id", "flag");
+      this.flagBox.childNodes[0].style.top = "10px";
+      this.flagBox.childNodes[0].childNodes[0].innerHTML = "";
 
-        regionBox.parentElement.parentElement.parentElement.append(this.flagBox);
-      
-        this.flagBox = document.getElementById("flag");
+      regionBox.parentElement.parentElement.parentElement.append(this.flagBox);
+
+      this.flagBox = document.getElementById("flag");
     }
     addDropDownFlag(flagName) {
       let newOption = document.createElement("option");
@@ -169,7 +183,7 @@ function doWork() {
       return cutOffValue;
     }
 
-    printInfo(){
+    printInfo() {
       console.log("Division: " + this.getDivision());
       let size = this.teamList.length - 1;
       console.log("Teams: " + size);
@@ -179,7 +193,7 @@ function doWork() {
     filter() {
       let qeuedCount = 0;
       for (let i = 1; i < this.teamList.length; i++) {
-        
+
         let currentFlag = this.teamList[i].childNodes[1].childNodes[0].childNodes[0].title ?? this.teamList[i].childNodes[1].childNodes[0].childNodes[0].childNodes[0].textContent;
         if (countryBox.selectedCountry() == "Country") {
           currentFlag = countryBox.selectedCountry();
@@ -198,7 +212,7 @@ function doWork() {
         if (i % 2) targetTeam.style.backgroundColor = 'rgb(68, 68, 68)';
 
         let teamRank = targetTeam.childNodes[0].textContent.slice(0, targetTeam.childNodes[0].textContent.length - 1);
-        
+
         if (teamRank <= esea.getCutOff()) {
           targetTeam.childNodes[0].style.color = "green";
         } else {
@@ -210,11 +224,11 @@ function doWork() {
 
   countryBox.create();
   countryBox.indexFlags();
-  /*document.getElementById("flag").onchange = function () {
+
+  document.getElementById("flag").onchange = function () {
     esea.filter();
-  };*/
+  };
+
   esea.printInfo();
   esea.filter();
 }
-
-doWork();
