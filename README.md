@@ -1,10 +1,16 @@
 # Filter-ESEA-League
 Filter teams on the ESEA's ranking webpage, javascript to filter the teams of an specific country and set colors if they are qualified for playoffs
 
+## Features
+* Only needs to be run once, everytime it detects a division change, refreshes itself.
+* Color feedback for teams qualified/unqualified for playoffs, depending on the ladder ranking.
+* Working for every past season too.
+
 # How it works
-1. Run the script
-2. Type the country that you want to filter (first characte on capital letter)
-3. Run the script as much as you want, no need to reload the page everytime you want to filter.
+* It will filter all the teams, and show colors depending on the state of the team
+  * Green = qualified for playoffs
+  * Red = not qualified for playoffs
+* Choose a country to show **only** the teams from that specific country.
 
 # How to run it
 ## Console
