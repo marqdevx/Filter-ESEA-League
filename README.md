@@ -7,12 +7,16 @@ Filter teams on the ESEA's ranking webpage, javascript to filter the teams of an
 * Working for every past season (Ony for Challenger, Advanced, Main, Intermdiate and Open divisions).
 
 ## How it works
-* It will filter all the teams, and show colors depending on the state of the team
+* It will filter all the teams, and show colors depending on the state of the team.
+
   * Green = qualified for playoffs
   * Red = not qualified for playoffs
 * Choose a country to show **only** the teams from that specific country.
 
 ## How to run it
+### Extension
+Install the extension and forget to run the script, it will auto load once you are on the https://play.esea.net/league/standings page.
+
 ### Console
 1. Copy the content of the `esea-league-filter.js`.
 2. Open your browser.
