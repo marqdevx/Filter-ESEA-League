@@ -1,12 +1,11 @@
 var myInterval = setInterval(autoChecker, 500);
+console.log("ESEA Filter enabled")
 
 function autoChecker() {
-  console.log("Checking");
   teamList = document.getElementsByClassName('Tr');
   exists = document.getElementById('flag');
-  if (teamList.length > 1 && !exists) {
+  if (teamList.length > 1 && (exists === null || exists === undefined) ) {
     doWork();
-    clearInterval(myInterval);
     document.getElementById("level").onchange = function () {
       console.log("Switched division");
       myInterval = setInterval(autoChecker, 500);
@@ -27,7 +26,8 @@ function doWork() {
       var regionBox = document.getElementById("region").parentElement.parentElement;
       this.flagBox = regionBox.cloneNode(true);
       this.flagBox.childNodes[0].childNodes[0].setAttribute("id", "flag");
-      this.flagBox.childNodes[0].style.top = "10px";
+      this.flagBox.style.top = "10px";
+      this.flagBox.style.position = "relative";
       this.flagBox.childNodes[0].childNodes[0].innerHTML = "";
 
       regionBox.parentElement.parentElement.parentElement.append(this.flagBox);
