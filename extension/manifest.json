@@ -9,7 +9,7 @@
     ],
     "browser_specific_settings": {
         "gecko": {
-            "id": "helloworld@yoursite.com",
+            "id": "<id>",
             "strict_min_version": "78.0"
         }
     },

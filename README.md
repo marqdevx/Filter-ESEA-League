@@ -1,6 +1,10 @@
 # Filter-ESEA-League
 Filter teams on the ESEA's ranking webpage, javascript to filter the teams of an specific country and set colors if they are qualified for playoffs
 
+>The name ESEA is a trademark of ESL Gaming Online, Inc. 
+>Tis a third-party browser extension and is not affiliated with ESEA or ESL Gaming Online, Inc.
+>Use it under your responsability
+
 ## Features
 * Only needs to be run once, everytime it detects a division change, refreshes itself.
 * Color feedback for teams qualified/unqualified for playoffs, depending on the ladder ranking.
@@ -16,6 +20,8 @@ Filter teams on the ESEA's ranking webpage, javascript to filter the teams of an
 ## How to run it
 ### Extension
 Install the extension and forget to run the script, it will auto load once you are on the https://play.esea.net/league/standings page.
+
+You can find the extension on [Firefox Add-ons platform](https://addons.mozilla.org/firefox/addon/esea-filter/)
 
 ### Console
 1. Copy the content of the `esea-league-filter.js`.
