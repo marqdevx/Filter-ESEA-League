@@ -1,3 +1,4 @@
+lastCountrySelected = "Country";
 var myInterval = setInterval(autoChecker, 500);
 console.log("ESEA Filter enabled")
 
@@ -54,7 +55,9 @@ function doWork() {
     fillDropDown() {
       for (let i = 0; i < this.totalFlags.length; i++) {
         this.addDropDownFlag(this.totalFlags[i]);
+        if (this.totalFlags[i] == lastCountrySelected) this.flagBox.selectedIndex = i+1;
       }
+      lastCountrySelected = this.selectedCountry();
     }
 
     indexFlags() {
@@ -229,6 +232,8 @@ function doWork() {
   countryBox.indexFlags();
 
   document.getElementById("flag").onchange = function () {
+
+    lastCountrySelected = countryBox.selectedCountry();
     esea.filter();
   };
 
