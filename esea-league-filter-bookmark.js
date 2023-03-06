@@ -43,7 +43,7 @@ javascript: (() => {
       addFlag(indexTeam) {
         this.flagOptions = this.flagBox.childNodes[0].childNodes[0];
 
-        let flagName = this.teamList[indexTeam].childNodes[1].childNodes[0].childNodes[0].title ?? this.teamList[indexTeam].childNodes[1].childNodes[0].childNodes[0].childNodes[0].textContent;
+        let flagName = this.teamList[indexTeam].childNodes[2].childNodes[0].childNodes[0].title ?? this.teamList[indexTeam].childNodes[2].childNodes[0].childNodes[0].childNodes[0].textContent;
         for (let i = 0; i <= this.flagsCount; i++) {
           if (flagName == this.totalFlags[i]) return;
         }
@@ -198,7 +198,7 @@ javascript: (() => {
         let qeuedCount = 0;
         for (let i = 1; i < this.teamList.length; i++) {
 
-          let currentFlag = this.teamList[i].childNodes[1].childNodes[0].childNodes[0].title ?? this.teamList[i].childNodes[1].childNodes[0].childNodes[0].childNodes[0].textContent;
+          let currentFlag = this.teamList[i].childNodes[2].childNodes[0].childNodes[0].title ?? this.teamList[i].childNodes[2].childNodes[0].childNodes[0].childNodes[0].textContent;
           if (countryBox.selectedCountry() == "Country") {
             currentFlag = countryBox.selectedCountry();
           }
